@@ -4,7 +4,11 @@
   font-family: sans-serif;
 }
 
+ul {
+  list-style: none;
+}
+
 .row {
   display: flex;
-  fled-direction: row;
+  flex-direction: row;
 }

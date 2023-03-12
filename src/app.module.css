@@ -1,0 +1,41 @@
+.root {
+  min-height: 100vh;
+  height: 100%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+.header {
+  padding-bottom: 30px;
+  text-align: center;
+  font-size: 72px;
+  overflow-wrap: break-word;
+}
+
+.forecast {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+@media (max-width: 1250px) {
+  .header {
+    font-size: 32px;
+    line-height: 1;
+    padding-bottom: 15px;
+  }
+
+  .forecast {
+    flex-direction: column;
+  }
+
+  .main {
+    align-items: unset;
+    padding: 15px;
+  }
+}

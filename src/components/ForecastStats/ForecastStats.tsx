@@ -1,6 +1,6 @@
 import styles from './forecast.module.css';
 
-interface ForecastStatsProps {
+export interface ForecastStatsProps {
   day: string;
   min: number;
   max: number;

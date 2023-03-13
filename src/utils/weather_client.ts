@@ -1,17 +1,18 @@
 import axios from "axios";
 
 const weatherClient = axios.create({
-	baseURL: 'https://pro.openweathermap.org/data/2.5/forecast',
+	baseURL: 'https://api.openweathermap.org/data/2.5/forecast',
 	params: {
-		appid: import.meta.env.VITE_API_KEY
+		appid: import.meta.env.VITE_API_KEY,
+		units: "metric"
 	}
+
 });
 
-interface HourlyParams {
-	lon: number;
-	lat: number;
+interface CityParams {
+	city: string
 }
 
-export const hourly = ({ lon, lat }: HourlyParams) => `/hourly?lat=${lat}&lon=${lon}`;
+export const city = ({ city }: CityParams) => `/?q=${city}`;
 
 export default weatherClient
